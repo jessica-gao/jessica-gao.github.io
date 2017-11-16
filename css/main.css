@@ -1,43 +1,137 @@
 body {
-    margin: 60px auto;
-    width: 70%;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 100px;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+
+nav {
+    display: block;
+    padding-right: 50px;
+    height: 50px;
+}
+
+nav a {
+    color: black;
+}
+
+nav div {
+    display: inline-block;
+    padding: 15px 20px;
+    float: right;
+}
+
+.heading {
+    text-align: center;
+}
+
+.name {
+    font-size: 48px;
+    letter-spacing: 10px;
+}
+
+.subheading {
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.picture-content{
+    margin-bottom: 15px;
+}
+
+.profile {
+    background-image: url("../profile.jpg");
+    width: 100%;
+    height: 400px;
+    background-position: center top;
+}
+
+.spacing {
+    width: 100%;
+    height: 100px;
+}
+
+.spacing-md {
+    width: 100%;
+    height: 40px;
+}
+
+.spacing-sm {
+    width: 100%;
+    height: 20px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact i{
+    padding: 0 10px;
+    color: #222;
+}
+
+.project-container{
     padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+img{
+    max-width: 100%;
 }
 
-ul.posts li {
-    list-style: none;
+hr{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-top: 1px solid #ccc;
+}
+
+.project-container img{
+    position: relative;
+    z-index: -2;
+}
+
+.project-container .overlay, .project-container .overlay-center-container{
+    opacity:0;
+    transition: opacity 0.3s;
+}
+
+.project-container:hover .overlay, .project-container:hover .overlay-center-container{
+    opacity:1;
+}
+
+.project-container .btn{
+    border-radius: 0px;
+    padding: 5px 10px;
+    margin: 0px 2px;
+    font-size: 12px;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background-color: rgba(0,0,0,0.7);
+}
+
+.overlay-center-container{
+    display: table;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.white-color{
+    color: white;
+}
+
+#projects .row{
+    margin-bottom: 50px;
+}
+
+.project-description {
+    text-align: left;
 }
